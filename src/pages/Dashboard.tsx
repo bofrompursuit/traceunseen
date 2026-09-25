@@ -34,20 +34,20 @@ export default function Dashboard() {
   const risk = useMemo(() => computeRisk(scenario), [scenario]);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-10">
+    <div className="min-h-screen bg-[#06120b] text-white">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-[#06120b]/70 backdrop-blur-md">
         <div className="mx-auto max-w-6xl px-6 py-5">
           <div className="flex items-center justify-between">
             <div>
-              <Link to="/" className="text-xs text-slate-500 hover:text-slate-300">&larr; Home</Link>
+              <Link to="/" className="text-xs text-[#a3b8ad]/70 transition hover:text-[#eab308]">&larr; Home</Link>
               <h1 className="text-xl font-bold tracking-tight text-white">
-                MineralShield <span className="text-sky-400">AI</span>
+                MineralShield <span className="text-[#eab308]">AI</span>
               </h1>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-[#a3b8ad]/70">
                 Critical Mineral Sanctions Evasion &amp; Dark Fleet Detection — TRACE THE UNSEEN, Climate Week NYC
               </p>
             </div>
-            <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs text-slate-400">
+            <span className="rounded-full border border-white/15 bg-[#0d1f15] px-3 py-1 text-xs text-[#a3b8ad]">
               {scenario.eoBasis}
             </span>
           </div>
@@ -63,8 +63,8 @@ export default function Dashboard() {
           onCustomQueryChange={setCustomQuery}
         />
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 text-sm text-slate-400">
-          <span className="font-medium text-slate-200">{scenario.shipment.commodity}</span> (HS {scenario.shipment.hsCode}) ·{' '}
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-[#a3b8ad]">
+          <span className="font-medium text-white">{scenario.shipment.commodity}</span> (HS {scenario.shipment.hsCode}) ·{' '}
           {scenario.shipment.originPort} → {scenario.shipment.destinationPort} · {scenario.shipment.vesselName} (
           {scenario.shipment.vesselFlag}) · loaded {scenario.shipment.loadDate}
         </div>
@@ -81,7 +81,7 @@ export default function Dashboard() {
 
         <ExportPanel scenario={scenario} risk={risk} />
 
-        <footer className="pb-8 pt-2 text-center text-xs text-slate-600">
+        <footer className="pb-8 pt-2 text-center text-xs text-[#a3b8ad]/50">
           Demo mode — Sayari / Tradeverifyd / Tavily calls are mocked with deterministic fallback data for reliable live demo.
         </footer>
       </main>
