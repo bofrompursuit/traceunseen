@@ -8,7 +8,7 @@ import { RedFlagsPanel } from '../components/RedFlagsPanel';
 import { SupplyChainTree } from '../components/SupplyChainTree';
 import { OwnershipGraph } from '../components/OwnershipGraph';
 import { ExportPanel } from '../components/ExportPanel';
-import { ShapeOfProblem } from '../components/ShapeOfProblem';
+import { EnablerNetworkPanel } from '../components/EnablerNetworkPanel';
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -75,7 +75,7 @@ export default function Dashboard() {
           <RedFlagsPanel scenario={scenario} risk={risk} />
         </div>
 
-        <ShapeOfProblem />
+        <EnablerNetworkPanel />
 
         <div className="grid gap-6 lg:grid-cols-2">
           <SupplyChainTree scenario={scenario} />
