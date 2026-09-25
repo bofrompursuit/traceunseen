@@ -21,7 +21,7 @@ export function ShapeOfProblem() {
           src={SHAPE_OF_PROBLEM_URL}
           title="Shape of the Problem"
           loading="lazy"
-          className="h-[420px] w-full sm:h-[520px] lg:h-[600px]"
+          className="h-[180px] w-full sm:h-[220px] lg:h-[260px]"
         />
       </div>
     </div>
