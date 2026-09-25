@@ -41,7 +41,7 @@ export default function Dashboard() {
             <div>
               <Link to="/" className="text-xs text-[#a3b8ad]/70 transition hover:text-[#eab308]">&larr; Home</Link>
               <h1 className="text-xl font-bold tracking-tight text-white">
-                MineralShield <span className="text-[#eab308]">AI</span>
+                Supply Sentinel Solutions<span className="text-[#eab308]">.ORG</span>
               </h1>
               <p className="text-xs text-[#a3b8ad]/70">
                 Critical Mineral Sanctions Evasion &amp; Dark Fleet Detection — TRACE THE UNSEEN, Climate Week NYC

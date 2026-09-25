@@ -13,7 +13,7 @@ export default function Landing() {
       <EcosystemSection />
       <ContactSection />
       <footer className="border-t border-white/5 bg-[#06120b] px-6 py-8 text-center text-xs text-[#a3b8ad]/60">
-        MineralShield AI — built for TRACE THE UNSEEN, Climate Week NYC. Demo mode — mock/fallback data throughout.
+        Supply Sentinel Solutions.ORG — built for TRACE THE UNSEEN, Climate Week NYC. Demo mode — mock/fallback data throughout.
       </footer>
     </div>
   );

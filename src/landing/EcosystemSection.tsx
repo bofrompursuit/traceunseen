@@ -35,7 +35,7 @@ export function EcosystemSection() {
           <span className="text-xs font-semibold uppercase tracking-widest text-[#eab308]">The Ecosystem</span>
           <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">Two signals, one origin trace</h2>
           <p className="mt-4 text-[#a3b8ad]">
-            MineralShield AI orchestrates maritime and corporate intelligence in parallel to compute a single
+            Supply Sentinel Solutions.ORG orchestrates maritime and corporate intelligence in parallel to compute a single
             divergence score for every shipment.
           </p>
         </motion.div>

@@ -6,7 +6,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2 text-sm font-semibold tracking-wide text-[#a3b8ad]">
           <iconify-icon icon="solar:shield-check-linear" width="22" className="text-[#eab308]" />
-          <span className="text-white">MineralShield</span> AI
+          <span className="text-white">Supply Sentinel Solutions</span><span className="text-[#eab308]">.ORG</span>
         </Link>
         <nav className="hidden items-center gap-8 text-sm text-[#a3b8ad] md:flex">
           <a href="#ecosystem" className="transition hover:text-white">Ecosystem</a>

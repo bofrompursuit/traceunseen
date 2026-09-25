@@ -1,4 +1,4 @@
-# MineralShield AI
+# Supply Sentinel Solutions.ORG
 
 Single-page prototype built for **TRACE THE UNSEEN: Climate Intelligence Build Day** (Climate Week NYC).
 

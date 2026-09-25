@@ -9,7 +9,7 @@ import type { RiskResult, Scenario } from '../types';
  */
 export function buildFabricPayload(scenario: Scenario, risk: RiskResult) {
   return {
-    schema: 'mineralshield.fabric.v1',
+    schema: 'supplysentinelsolutions.fabric.v1',
     generatedAt: new Date().toISOString(),
     eoBasis: scenario.eoBasis,
     bronze: {

@@ -6,7 +6,7 @@ export function generateBrief(scenario: Scenario, risk: RiskResult): string {
 
   const lines = [
     'EXECUTIVE ENFORCEMENT BRIEF',
-    'MineralShield AI — Climate Intelligence Build Day',
+    'Supply Sentinel Solutions.ORG — Climate Intelligence Build Day',
     `Generated ${date}  |  Legal basis: ${scenario.eoBasis}`,
     '='.repeat(60),
     '',
