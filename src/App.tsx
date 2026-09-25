@@ -1,88 +1,16 @@
-import { useEffect, useMemo, useState } from 'react';
-import { SCENARIOS, SCENARIO_A_HIGH_RISK } from './data/mockScenarios';
-import { runOrchestration } from './lib/mcpTools';
-import { computeRisk } from './lib/riskEngine';
-import { ShipmentSelector } from './components/ShipmentSelector';
-import { RiskScorecard } from './components/RiskScorecard';
-import { RedFlagsPanel } from './components/RedFlagsPanel';
-import { SupplyChainTree } from './components/SupplyChainTree';
-import { OwnershipGraph } from './components/OwnershipGraph';
-import { ExportPanel } from './components/ExportPanel';
+import { Route, Routes } from 'react-router-dom';
+import Landing from './pages/Landing';
+import Dashboard from './pages/Dashboard';
+import { ScrollToAnchor } from './landing/ScrollToAnchor';
 
 export default function App() {
-  const [scenarioId, setScenarioId] = useState(SCENARIO_A_HIGH_RISK.id);
-  const [customQuery, setCustomQuery] = useState('');
-  const [loading, setLoading] = useState(true);
-
-  const scenario = useMemo(
-    () => SCENARIOS.find((s) => s.id === scenarioId) ?? SCENARIO_A_HIGH_RISK,
-    [scenarioId],
-  );
-
-  useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    runOrchestration(scenario).then(() => {
-      if (!cancelled) setLoading(false);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [scenario]);
-
-  const risk = useMemo(() => computeRisk(scenario), [scenario]);
-
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-10">
-        <div className="mx-auto max-w-6xl px-6 py-5">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-xl font-bold tracking-tight text-white">
-                MineralShield <span className="text-sky-400">AI</span>
-              </h1>
-              <p className="text-xs text-slate-500">
-                Critical Mineral Sanctions Evasion &amp; Dark Fleet Detection — TRACE THE UNSEEN, Climate Week NYC
-              </p>
-            </div>
-            <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs text-slate-400">
-              {scenario.eoBasis}
-            </span>
-          </div>
-        </div>
-      </header>
-
-      <main className="mx-auto max-w-6xl px-6 py-6 space-y-6">
-        <ShipmentSelector
-          scenario={scenario}
-          onSelect={setScenarioId}
-          loading={loading}
-          customQuery={customQuery}
-          onCustomQueryChange={setCustomQuery}
-        />
-
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-4 text-sm text-slate-400">
-          <span className="font-medium text-slate-200">{scenario.shipment.commodity}</span> (HS {scenario.shipment.hsCode}) ·{' '}
-          {scenario.shipment.originPort} → {scenario.shipment.destinationPort} · {scenario.shipment.vesselName} (
-          {scenario.shipment.vesselFlag}) · loaded {scenario.shipment.loadDate}
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-2">
-          <RiskScorecard risk={risk} />
-          <RedFlagsPanel scenario={scenario} risk={risk} />
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-2">
-          <SupplyChainTree scenario={scenario} />
-          <OwnershipGraph scenario={scenario} />
-        </div>
-
-        <ExportPanel scenario={scenario} risk={risk} />
-
-        <footer className="pb-8 pt-2 text-center text-xs text-slate-600">
-          Demo mode — Sayari / Tradeverifyd / Tavily calls are mocked with deterministic fallback data for reliable live demo.
-        </footer>
-      </main>
-    </div>
+    <>
+      <ScrollToAnchor />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/app" element={<Dashboard />} />
+      </Routes>
+    </>
   );
 }
