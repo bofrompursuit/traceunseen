@@ -1,4 +1,4 @@
-# Supply Sentinel Solutions.ORG
+# SupplySentinel+ Solutions
 
 Single-page prototype built for **TRACE THE UNSEEN: Climate Intelligence Build Day** (Climate Week NYC).
 

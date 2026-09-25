@@ -88,7 +88,7 @@ export function TemplateHero() {
             className="mt-6 max-w-xl text-base text-[#a3b8ad] sm:text-lg"
             style={{ opacity: 1 - progress }}
           >
-            Supply Sentinel Solutions.ORG traces critical mineral shipments — nickel, cobalt, lithium — through shell companies,
+            SupplySentinel+ Solutions traces critical mineral shipments — nickel, cobalt, lithium — through shell companies,
             dark-fleet transfers, and sanctioned ownership back to the raw material origin.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4" style={{ opacity: 1 - progress }}>

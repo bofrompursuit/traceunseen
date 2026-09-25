@@ -8,6 +8,7 @@ import { RedFlagsPanel } from '../components/RedFlagsPanel';
 import { SupplyChainTree } from '../components/SupplyChainTree';
 import { OwnershipGraph } from '../components/OwnershipGraph';
 import { ExportPanel } from '../components/ExportPanel';
+import { ShapeOfProblem } from '../components/ShapeOfProblem';
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -41,7 +42,7 @@ export default function Dashboard() {
             <div>
               <Link to="/" className="text-xs text-[#a3b8ad]/70 transition hover:text-[#eab308]">&larr; Home</Link>
               <h1 className="text-xl font-bold tracking-tight text-white">
-                Supply Sentinel Solutions<span className="text-[#eab308]">.ORG</span>
+                SupplySentinel<span className="text-[#eab308]">+</span> Solutions
               </h1>
               <p className="text-xs text-[#a3b8ad]/70">
                 Critical Mineral Sanctions Evasion &amp; Dark Fleet Detection — TRACE THE UNSEEN, Climate Week NYC
@@ -73,6 +74,8 @@ export default function Dashboard() {
           <RiskScorecard risk={risk} />
           <RedFlagsPanel scenario={scenario} risk={risk} />
         </div>
+
+        <ShapeOfProblem />
 
         <div className="grid gap-6 lg:grid-cols-2">
           <SupplyChainTree scenario={scenario} />
