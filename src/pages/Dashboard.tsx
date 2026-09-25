@@ -9,6 +9,7 @@ import { SupplyChainTree } from '../components/SupplyChainTree';
 import { OwnershipGraph } from '../components/OwnershipGraph';
 import { ExportPanel } from '../components/ExportPanel';
 import { EnablerNetworkPanel } from '../components/EnablerNetworkPanel';
+import { ShapeOfProblem } from '../components/ShapeOfProblem';
 import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
@@ -56,6 +57,8 @@ export default function Dashboard() {
       </header>
 
       <main className="mx-auto max-w-6xl px-6 py-6 space-y-6">
+        <ShapeOfProblem />
+
         <ShipmentSelector
           scenario={scenario}
           onSelect={setScenarioId}
